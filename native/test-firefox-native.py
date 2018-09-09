@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 # symlink this file into your home dir
-# ln -sv $(realpath ./native/test-firefox-native.py) ~/
+# ln -sv $(realpath ./native/test-firefox-native.py) /tmp/
 # and the json file into your user's native-messaging-hosts dir:
 # ln -sv $(realpath ./native/test_firefox_native.json) ~/.mozilla/native-messaging-hosts/test_firefox_native.json
 
