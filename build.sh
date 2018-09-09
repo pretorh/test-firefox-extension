@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
 
 zip testffext.xpi \
-  manifest.json
+  manifest.json \
+  background.js
