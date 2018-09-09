@@ -21,6 +21,21 @@ function addListeners() {
     var backgroundPage = browser.extension.getBackgroundPage();
     backgroundPage.openTab();
   });
+
+  document.getElementById('ping').addEventListener('click', function() {
+    function show(message) {
+      document.getElementById('echo').innerHTML = message;
+    }
+
+    function sendMessage() {
+      var sending = browser.runtime.sendNativeMessage("test_firefox_native", "ping at " + Date.now());
+      sending
+        .then((response) => show(response))
+        .catch((err) => show(`failed, ${JSON.stringify(error)}`));
+    }
+
+    sendMessage();
+  });
 }
 
 function reportExecuteScriptError(err) {

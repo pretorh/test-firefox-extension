@@ -28,3 +28,11 @@ from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your
 need `activeTab` to inject js into active tab
 
 add `commands` object in manifest with array of commands and shortcut keys, listed in background script with `browser.commands.onCommand.addListener((command) => { ... });`
+
+## native messaging
+
+read stdin, output to stdout. process started as needed
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging
+
+create json file in `~/.mozilla/native-messaging-hosts/test-firefox-native.json` with path pointing to an executable script

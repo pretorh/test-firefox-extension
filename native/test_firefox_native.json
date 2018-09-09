@@ -1,0 +1,7 @@
+{
+  "name": "test_firefox_native",
+  "description": "test firefox extention native message. synlink this json into ~/.mozilla/native-messaging-hosts/. change path to full path (resolve ~)",
+  "path": "~/test-firefox-native.py",
+  "type": "stdio",
+  "allowed_extensions": [ "test-ff-extention@example.com" ]
+}
