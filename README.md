@@ -16,3 +16,9 @@ can set icons using:
 "icons": { "48": "icon.png", "128": "icon128.png" }
 "default_icon": { "19": "button.png", "38": "button38.png" }
 ```
+
+## mozilla notes
+
+from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+
+`content_scripts` can be loaded into urls that match a pattern. simple js file that is added into the page
