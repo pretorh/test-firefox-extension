@@ -7,6 +7,9 @@
         "id": "test-ff-extention@example.com"
       }
     },
+    "permissions": [
+      "tabs"
+    ],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
