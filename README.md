@@ -24,3 +24,5 @@ from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your
 `content_scripts` can be loaded into urls that match a pattern. simple js file that is added into the page
 
 `browser_action.default_popup`: a html file to show as a popup
+
+need `activeTab` to inject js into active tab
