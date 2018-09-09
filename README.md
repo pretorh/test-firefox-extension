@@ -26,3 +26,5 @@ from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your
 `browser_action.default_popup`: a html file to show as a popup
 
 need `activeTab` to inject js into active tab
+
+add `commands` object in manifest with array of commands and shortcut keys, listed in background script with `browser.commands.onCommand.addListener((command) => { ... });`
