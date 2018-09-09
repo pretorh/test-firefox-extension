@@ -26,3 +26,5 @@ function openTab() {
     }
   });
 }
+
+var loadTime;

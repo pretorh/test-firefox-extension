@@ -1,4 +1,8 @@
 function addListeners() {
+  var backgroundPage = browser.extension.getBackgroundPage();
+  backgroundPage.loadTime = backgroundPage.loadTime || Date.now();
+  document.getElementById('load').innerHTML = `popup loaded at ${Date.now()}, first @ ${backgroundPage.loadTime}`;
+
   function sendCommand(command) {
     return function (tabs) {
       browser.tabs.sendMessage(tabs[0].id, {
@@ -18,7 +22,6 @@ function addListeners() {
       .catch(reportExecuteScriptError);
   });
   document.getElementById('open').addEventListener('click', function() {
-    var backgroundPage = browser.extension.getBackgroundPage();
     backgroundPage.openTab();
   });
 
