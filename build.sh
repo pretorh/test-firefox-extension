@@ -2,4 +2,4 @@
 
 zip testffext.xpi \
   manifest.json \
-  *.js
+  *.js *.html
