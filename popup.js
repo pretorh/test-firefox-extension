@@ -17,6 +17,10 @@ function addListeners() {
       .then(sendCommand('remove'))
       .catch(reportExecuteScriptError);
   });
+  document.getElementById('open').addEventListener('click', function() {
+    var backgroundPage = browser.extension.getBackgroundPage();
+    backgroundPage.openTab();
+  });
 }
 
 function reportExecuteScriptError(err) {
