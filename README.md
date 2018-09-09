@@ -9,3 +9,10 @@ build `.xpi` file (extention files are plain zip files, with `xpi` extention)
 to install, enable unsigned in [firefox settings](about:config) by setting `xpinstall.signatures.required` to false ([reference](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct#w_what-are-my-options-if-i-want-to-use-an-unsigned-add-on-advanced-users))
 
 need `tabs` permission to read tabs
+
+can set icons using:
+
+```
+"icons": { "48": "icon.png", "128": "icon128.png" }
+"default_icon": { "19": "button.png", "38": "button38.png" }
+```
