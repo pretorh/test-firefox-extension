@@ -28,9 +28,16 @@ function addListeners() {
     }
 
     function sendMessage() {
-      var sending = browser.runtime.sendNativeMessage("test_firefox_native", "ping at " + Date.now());
+      const data = {
+        r: 'ping',
+        d: Date.now(),
+      };
+      var sending = browser.runtime.sendNativeMessage("test_firefox_native", data);
       sending
-        .then((response) => show(response))
+        .then((data) => {
+          data.round = Date.now() - data.sent;
+          show(JSON.stringify(data));
+        })
         .catch((err) => show(`failed, ${JSON.stringify(error)}`));
     }
 

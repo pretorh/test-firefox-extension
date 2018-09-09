@@ -10,6 +10,7 @@
 import json
 import sys
 import struct
+import datetime
 
 
 def get_message():
@@ -35,4 +36,12 @@ def send_message(encoded_message):
 
 while True:
     message = get_message()
-    send_message(encode_message("got message: '" + message + "'"))
+    now = datetime.datetime.now().timestamp() * 1000
+    time_to_receive = now - message['d']
+    reply = {
+        'got': message['r'],
+        'sent': message['d'],
+        'at': now,
+        'rcvd': time_to_receive,
+    }
+    send_message(encode_message(reply))
