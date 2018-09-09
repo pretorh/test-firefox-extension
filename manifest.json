@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+    "name": "Test Firefox Extention",
+    "version": "0.0",
+    "applications": {
+      "gecko": {
+        "id": "test-ff-extention@example.com"
+      }
+    },
+    "browser_action": {
+      "default_title": "Test Firefox Extention Title"
+    }
+}
