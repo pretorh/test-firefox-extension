@@ -32,11 +32,12 @@ var loadTime;
 browser.contextMenus.create({
   id: 'log-selection',
   title: 'Log selection',
-  contexts: ['selection'],
+  contexts: ['selection', 'link'],
 });
 
 browser.contextMenus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId === 'log-selection') {
     console.log(info.selectionText);
+    console.log(info.linkUrl);
   }
 });
